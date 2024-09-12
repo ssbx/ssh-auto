@@ -1,0 +1,12 @@
+#!/bin/sh
+
+comp=""
+while read l; do
+  comp="${comp} $l"
+done < ${SSH2_HOSTS}
+
+complete -W "$comp" ${SSH2_SCRIPT}
+
+export USERNAME="myname"
+export SSHPASS="mypass"
+
