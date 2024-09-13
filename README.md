@@ -1,10 +1,10 @@
+
 ```console
-$ chmod og-r ssh2_autocompletion.source
+$ make SSHAUTO_USERNAME="name" SSHPASS="password" install
 ```
 
-depuis bashrc
+Then in your bashrc:
+
 ```console
-export SSH2_SCRIPT=/path/ssh2
-export SSH2_HOSTS=/path/hosts.txt
-source /path/ssh2_autocompletion.source
+source $HOME/.sshauto.source
 ```

@@ -1,0 +1,13 @@
+
+export SSHAUTO_USERNAME="@SSHAUTO_USERNAME@"
+export SSHAUTO_HOSTS="@SSHAUTO_HOSTS@"
+export SSHPASS="@SSHPASS@"
+export SSHAUTO_BIN="@SSHAUTO_BIN@"
+
+comp=""
+while read l; do
+  comp="${comp} $l"
+done < ${SSHAUTO_HOSTS}
+
+complete -W "$comp" sshauto
+

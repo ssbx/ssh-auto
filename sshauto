@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "running: ssh $@"
+sshpass -e ssh ${SSHAUTO_USERNAME}@${1}
